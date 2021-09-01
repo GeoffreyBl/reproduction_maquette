@@ -1,0 +1,201 @@
+:root{
+    --lightgrey : rgba(221,229,232,255);
+    --purple : rgba(213, 19, 112, 255);
+    --blue : rgba(110,164,181);
+    --lightblue : rgba(153,194,204);
+}
+*{
+    font-family: sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+.row{
+    margin-top: 30px;
+}
+.double-view{
+    height:370px;
+    max-height: 370px;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* max-width:600px; */
+    margin: 10px auto;
+}
+.double-view__picture{
+    background-color: var(--lightgrey);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    height: 180px;
+}
+.double-view__picture__p{
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0;
+    line-height:2rem;
+    margin-left: 6%;
+}
+.double-view__picture__p__span{
+    color : var(--purple);
+}
+.double-view__picture__img{
+    position: relative;    
+    top: auto;
+    left: 20px;
+    height:110px;
+}
+.view{
+    margin: 10px auto;
+    height: 370px;
+    transition: 140ms;
+    min-width: 350px;
+    max-height: 370px;
+    /* max-width:600px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.view:hover{
+    transform: scale(1.08);
+    cursor: pointer;
+}
+.view__header{
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.view__header__p{
+    color: white;
+    font-weight: 600;
+    font-size:1.1rem;
+    margin: 0;
+    padding: 2px 3px;
+    height: 18px;
+}
+.view__header__p_purple{
+    background-color: var(--purple);
+}
+.view__header__p_light{
+    background-color: var(--lightblue);
+}
+.view__header__p_blue{
+    background-color: var(--blue);
+}
+.view__header__left--disabled{
+    display: none;
+}
+.view__header__right{
+    background-color: var(--lightgrey);
+    color: white;
+    font-weight: 600;
+    font-size:1.1rem;
+    margin: 0;
+    padding: 2px 3px;
+    height: 18px;
+}
+.view__img{
+    display: block;
+    max-width:340px;
+    max-height:220px;
+}
+.view__description{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    border-bottom: 2px rgba(228, 227, 227, 0.699) solid;
+}
+.view__description__left{
+    width: 60%;
+}
+.view__description__left__title1{
+    font-weight: 600;
+    text-transform: uppercase;
+    color: rgba(59, 63, 50);
+    margin: 0;
+    font-size: 1.2rem;
+}
+.view__description__left__title2{
+    margin: 0px 0;
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: rgb(56, 56, 56);
+}
+.view__description__left__title3{
+    text-transform: uppercase;
+    font-size: 1.0rem;
+    margin-bottom: 0;
+    font-weight: 400;
+    color: rgb(119, 119, 119);
+}
+.view__description__left__title3--disabled{
+    display: none;
+}
+.view__description__left__stocks{
+    display:flex;
+    align-items: center;
+    margin: 10px 0px;
+}
+.view__description__left__stocks__blue-circle{
+    height:13px;
+    width:13px;
+    background-color: rgba(157,205,231, 0.8);
+    border-radius: 50%;
+    margin-right: -7px;
+    z-index: 1;
+}
+.view__description__left__stocks__green-circle{
+    height:13px;
+    width:13px;
+    background-color: rgba(191,211,82, 0.8);
+    border-radius: 50%;
+}
+.view__description__left__stocks__store-stock{
+    font-size: 0.7rem;
+    color: rgb(119, 119, 119);
+}
+.view__description__right{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    max-height: 100%;
+    align-self: flex-end;
+}
+.view__description__right__percentage{
+    color: rgba(204,20,140,255);
+    font-weight: 800;
+    margin: 0;
+    font-size: 1.2rem;
+}
+.view__description__right__percentage--disabled{
+    display: none;
+}
+.view__description__right__from{
+    font-size: 1.2rem;
+    line-height: 0.9rem;
+    color: rgb(56, 56, 56);
+    font-weight: 600;
+    margin: 0;
+}
+.view__description__right__prices__MSRP{
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: rgb(143, 143, 143);
+    text-decoration: line-through;
+}
+.view__description__right__prices__price{
+    font-weight: 800;
+    font-size: 1.5rem;
+    align-self: center;
+}
+.view__description__right__eco{
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    
+}
